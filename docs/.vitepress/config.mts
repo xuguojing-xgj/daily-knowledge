@@ -6,9 +6,8 @@ export default defineConfig({
   title: "戏偶",
   description: "A VitePress Site",
 
-  /* prettier-ignore */
   head: [
-      ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
