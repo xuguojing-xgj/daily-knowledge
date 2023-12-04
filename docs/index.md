@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习->
-      link: /CSS/01-index
+      link: /css/questions
     - theme: alt
       text: API Examples
       link: /api-examples
