@@ -7,6 +7,13 @@ outline: deep
 ## CSS 盒子模型是由哪些部分组成
 
 ::: details 详情
+
+```css
+   body {
+        box-sizing: border-box; // 默认值 content-box 
+    }   
+```
+
 **1. 内容区(content):**
 - 主要呈现, 文本图片等多种类型... 
 - 内容区三大属性: **width** **height** **overflow**;
