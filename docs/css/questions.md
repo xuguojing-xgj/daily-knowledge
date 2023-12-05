@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# 常见面试题
 
-## CSS 盒子模型是由哪些部分组成
 
-::: details 详情
+### 盒子模型是由哪些部分组成
+
+::: details 详情 {open}
 
 ```css
    body {
@@ -14,26 +14,58 @@ outline: deep
     }   
 ```
 
-**1. 内容区(content):**
-- 主要呈现, 文本图片等多种类型... 
-- 内容区三大属性: **width** **height** **overflow**;
+**1. 内容区 ``content``**
+- 主要呈现, 文本图片或是一个视频播放器等多种类型... 
+- ``box-sizing``为默认值时,可以通过``width`` ``min-width`` ``max-width`` ``height`` ``min-height``           ``max-height`` ``overflow`` 控制
 
-**2. 内边距(padding)**
+**2. 内边距 ``padding``**
 
-**3. 边框(border):**
-- 边框属性有: **border-style** **border-width** **border-color**; 缩写:**border**
-- **border-style取值:**  **dotted(点线)** **dashed(虚线)** **solid(实线)** **double(双边框)**
-- **groove(3D沟槽边框)** **ridge(3D脊边框)** **inset(3D的嵌入边框)** **outset(3D突出边框)**
-- 3D边框的效果取决于边框的颜色值
+**3. 边框 ``border``**
+- 边框属性有: ``border-style`` ``border-width`` ``border-color``; 简写:``border``
 
-**4.外边距(margin)**
+
+**4.外边距 ``margin``**
 :::
 
 
-## 
+### 如何解决盒子塌陷问题
+
+::: details 详情 {open}
+
+```css
+// 第一种方法
+    .father {
+        overflow: hidden;
+    }
+// 第二种方法
+    .father {
+        width: 300px;
+        height: 300px;
+    }
+    .father::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+```
+
+嵌套的块级元素,同时设置了外边距或者父元素未设置高度子元素浮动导致盒子塌陷
+
+- 解决方法:  
+
+1. 为父元素添加 ``overflow:hidden``
+2. 为父元素添加高度和清除浮动
+:::
 
 
+### 如何使一个盒子垂直水平居中
 
 
+### 在css中使用变量
+
+::: details 详情 {open}
+
+
+:::
 
 

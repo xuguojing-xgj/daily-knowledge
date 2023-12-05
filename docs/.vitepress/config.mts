@@ -9,6 +9,7 @@ export default defineConfig({
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     themeConfig: {
+        logo: { src: '/favicon.ico', width: 24, height: 24 },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '首页', link: '/' },
@@ -18,8 +19,9 @@ export default defineConfig({
         sidebar: [
             {
                 text: 'css',
+                collapsed: false,
                 items: [
-                    { text: '面试问题', link: '/css/questions' },
+                    { text: '学习内容', link: '/css/questions' },
                     { text: '文章阅读', link: '/css/articleReading' }
                 ]
             }
@@ -42,7 +44,7 @@ export default defineConfig({
 })
 
 function nav() :DefaultTheme.SidebarItem[]  {
-    return
+    return []
 }
 
 

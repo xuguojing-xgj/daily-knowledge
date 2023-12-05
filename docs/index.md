@@ -14,7 +14,7 @@ hero:
       text: API Examples
       link: /api-examples
   image:
-    src: /vitepress-logo-large.webp
+    src: /1.jpg
     alt: VitePress
 features:
   - title: 《梦江南·千万恨》 -- 唐·温庭筠
@@ -24,3 +24,26 @@ features:
   - title: 《点绛唇·闲倚胡床》 -- 宋·苏轼
     details: 闲倚胡床，庾公楼外峰千朵。与谁同坐。明月清风我。
 ---
+
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+/* 
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, red 50%, #47caff 50%);
+ 
+    --vp-home-hero-image-filter: blur(44px); */
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+</style>
