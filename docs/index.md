@@ -14,7 +14,7 @@ hero:
       text: API Examples
       link: /api-examples
   image:
-    src: /1.jpg
+    src: ./1.jpg
     alt: VitePress
 features:
   - title: 《梦江南·千万恨》 -- 唐·温庭筠

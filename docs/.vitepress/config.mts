@@ -18,6 +18,11 @@ export default defineConfig({
 
         sidebar: [
             {
+                text: 'http',
+                collapsed: false,
+                items: []
+            },
+            {
                 text: 'css',
                 collapsed: false,
                 items: [
