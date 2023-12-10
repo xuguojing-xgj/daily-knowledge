@@ -20,7 +20,9 @@ export default defineConfig({
             {
                 text: 'http',
                 collapsed: false,
-                items: []
+                items: [
+                    { text: '学习内容', link: '/http/questions' },
+                ]
             },
             {
                 text: 'css',
