@@ -21,7 +21,7 @@ export default defineConfig({
                 text: 'http',
                 collapsed: false,
                 items: [
-                    { text: '学习内容', link: '/http/questions' },
+                    { text: 'http状态码', link: '/http/01http状态码' },
                 ]
             },
             {
