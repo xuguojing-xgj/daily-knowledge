@@ -2,6 +2,20 @@
 outline: deep
 ---
 
+<script setup>
+import '../iconfont/iconfont.js'
+</script>
+
+<style module>
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+</style>
+
 ### http 状态码
 
 > _状态码类别：_
@@ -14,12 +28,38 @@ outline: deep
 | 4XX | Client Error(客户端错误)  |         服务器无法处理请求 |
 | 5XX | Server Error(服务器错误 ) |         服务器处理请求出错 |
 
+> ###### **1XX 临时响应**
+
+::: tip 详情
+
++  100(Continue): 表示目前为止请求都很正常,客户端应该继续请求,如果已完成则忽略此信息。
++  101(Switching Protocols)：服务器已理解客户端的请求,并将通过``Upgrade``消息头通知客户端采用不同的协议完成这个请求。在发送完这个响应最后的空行后,服务器将会切换到``Upgrade``消息头中定义那些协议。
++  102(Processing (WebDAV)):由WebDAV（RFC 2518）扩展的状态码,表示服务器已经接收并正在处理请求,但无响应可用。
++  103(Early Hints):主要用于与``Link``链接头一起使用,允许服务器在最终的HTTP/2.0响应前发送一些性能提示。
+
+:::
+
+
 > ###### **2XX 成功**
 ::: tip 详情
 
 +  200(ok): 请求已成功，表示从客户端发来的请求在服务器端被正常处理了。
-+  204(No Content)：请求处理成功！但没有资源返回。该状态码代表服务器接受的请求已成功处理，但在返回的响应报文中不含实体的主体部分(也不允许返回任何实体的主体)，从浏览器发送请求处理后，返回响应**204**，浏览器显示的页面不会发生更新。
-+  206(Partial Content)请求范围，该状态码表示客户端只进行了范围请求，而服务器成功执行了这部分的**GET**请求。响应报文中包含由``Content-Range``指定范围的实体内容。
++  201(Created): 请求已成功,并因此创建了一个新的资源。
+    <div style='color:;margin:10px;'>
+    <svg class="icon" aria-hidden="true" width='15px' height='15px' style="display:inline-block;">
+     <use xlink:href="#icon-naicha-01"></use>
+    </svg>
+    这通常是在POST请求或者是某些PUT请求之后返回的响应。
+    </div>
++  202(Accepted): 请求已被接受,但还未处理。
+    -   实际情况会因情况而异,可能是在处理请求时发现了一个错误,但不想让客户端重新发送请求,或者在处理之前需要等待另一个进程完成操作。
++  203(Non-Authoritative Information): 服务器已成功处理请求,但返回了可能来自另一来源的信息(返回信息可能不正确)
++  204(No Content)：服务器成功处理了请求,但没有返回任何内容。
+    -   该状态码代表服务器接受的请求已成功处理，但在返回的响应报文中不含实体的主体部分(也不允许返回任何实体的主体)，从浏览器发送请求处理后，返回响应204，浏览器显示的页面不会发生更新,也可以通过此代码告知浏览器继续访问上次的页面。
++  205(Reset Content): 服务器成功处理了请求,但没有返回任何内容。
+    -   与204响应不同(此响应要求请求者进行重置操作)
++  206(Partial Content)请求范围，该状态码表示客户端只进行了范围请求(GET)
+    -   而服务器成功执行了这部分的GET请求。响应报文中包含由``Content-Range``指定范围的实体内容。
 
 :::
 
