@@ -3,7 +3,8 @@ outline: deep
 ---
 
 <script setup>
-import '../iconfont/iconfont.js'
+import '../iconfont/iconfont.js';
+import StatusCodeComponent from './component/StatusCode.vue'
 </script>
 
 <style module>
@@ -75,6 +76,8 @@ import '../iconfont/iconfont.js'
     200(ok): 请求已成功。
 </div>
 
+
+<StatusCodeComponent text='表示从客户端发来的请求在服务器端被正常处理了。'></StatusCodeComponent>
 
 <div style='color:#50C878;margin-top:10px;margin-left:30px;'>
 <svg class="icon" aria-hidden="true" width='15px' height='15px' style="display:inline-block;">
