@@ -3,19 +3,12 @@ outline: deep
 ---
 
 <script setup>
-import '../iconfont/iconfont.js';
+
 import StatusCodeComponent from './component/StatusCode.vue'
+
+
 </script>
 
-<style module>
-.icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
-</style>
 
 ### http 状态码
 
