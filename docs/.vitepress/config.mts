@@ -21,7 +21,7 @@ export default defineConfig({
                 text: 'http',
                 collapsed: false,
                 items: [
-                    { text: 'http状态码', link: '/http/http状态码' },
+                    { text: 'http状态码', link: '/http/http-status-code' },
                 ]
             },
             {
@@ -36,7 +36,7 @@ export default defineConfig({
                 text: 'js',
                 collapsed: false,
                 items: [
-                    { text: '闭包', link: '/js/闭包' },
+                    { text: '闭包', link: '/js/bibao' },
                 ]
             },
             {
