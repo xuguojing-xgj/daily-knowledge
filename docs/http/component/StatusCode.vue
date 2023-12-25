@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '../../iconfont/iconfont';
+
 
 interface Props {
     title?: string;
@@ -17,16 +17,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
     <h6 v-if='props.isTitle' class="title">
-        <svg class="icon" aria-hidden="true" width='15px' height='15px' style="display:inline-block;">
-            <use xlink:href="#icon-nailao-01"></use>
-        </svg>
+        <img src="../images/nailao-01.png" class="image" alt="">
         {{props.title}}
     </h6>
 
     <div v-else class="statuscodetext">
-        <svg class="icon" aria-hidden="true" width='15px' height='15px' style="display:inline-block;">
-            <use xlink:href="#icon-naicha-01"></use>
-        </svg>
+        <img src="../images/naicha-01.png" class="image" alt="">
          {{props.text}}
     </div>
 </template>
@@ -41,14 +37,23 @@ const props = withDefaults(defineProps<Props>(), {
 }
 
 .title {
+    /* 指定对齐方式 */
+    vertical-align: center; 
     font-size: 14px;
     padding-top:5px;
     padding-left:10px;
+}
+.image {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
 }
 
 .statuscodetext {
     margin-top:10px;
     margin-left:30px;
+    vertical-align: center; 
+    /* 设置字体渐变 */
     background: linear-gradient(to right, red, blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

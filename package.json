@@ -22,5 +22,9 @@
         "search-insights"
       ]
     }
+  },
+  "dependencies": {
+    "@vue/runtime-core": "^3.3.13",
+    "vue": "^3.3.13"
   }
 }
