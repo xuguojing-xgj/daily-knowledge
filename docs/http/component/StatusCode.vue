@@ -16,13 +16,13 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <h6 v-if='props.isTitle' class="title">
-        <img src="../images/nailao-01.png" class="image" alt="">
+    <h6 v-if='props.isTitle' class="StatusCodeTitle">
+        <img src="../images/nailao-01.png" class="StatusCodeImage" alt="">
         {{props.title}}
     </h6>
 
     <div v-else class="statuscodetext">
-        <img src="../images/naicha-01.png" class="image" alt="">
+        <img src="../images/naicha-01.png" class="StatusCodeImage" alt="">
          {{props.text}}
     </div>
 </template>
@@ -36,14 +36,14 @@ const props = withDefaults(defineProps<Props>(), {
   overflow: hidden;
 }
 
-.title {
+.StatusCodeTitle {
     /* 指定对齐方式 */
     vertical-align: center; 
     font-size: 14px;
     padding-top:5px;
     padding-left:10px;
 }
-.image {
+.StatusCodeImage {
     display: inline-block;
     width: 15px;
     height: 15px;
