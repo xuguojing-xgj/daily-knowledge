@@ -21,13 +21,13 @@ const props = withDefaults(defineProps<Props>(), {
         {{props.title}}
     </h6>
 
-    <div v-else class="statuscodetext">
+    <div v-else class="StatusCodeText">
         <img src="../images/naicha-01.png" class="StatusCodeImage" alt="">
          {{props.text}}
     </div>
 </template>
 
-<style>
+<style scoped>
 .icon {
   width: 1em;
   height: 1em;
@@ -49,7 +49,7 @@ const props = withDefaults(defineProps<Props>(), {
     height: 15px;
 }
 
-.statuscodetext {
+.StatusCodeText {
     margin-top:10px;
     margin-left:30px;
     vertical-align: center; 
