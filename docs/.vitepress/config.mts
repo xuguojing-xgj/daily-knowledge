@@ -36,7 +36,7 @@ export default defineConfig({
                 text: 'js',
                 collapsed: false,
                 items: [
-                    { text: '闭包', link: '/js/bibao' },
+                    { text: '闭包', link: '/js/closure' },
                 ]
             },
             {
