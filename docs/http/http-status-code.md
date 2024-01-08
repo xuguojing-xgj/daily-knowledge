@@ -16,13 +16,13 @@ import StatusCodeComponent from './component/StatusCode.vue'
 
 |     |           类别            |                   原因短语 |
 | --- | :-----------------------: | :-------------------------: |
-| 1XX | Informational(信息状态码) |         接受的请求正在处理 |
-| 2XX |     Success(请求成功)     |           请求正常处理完毕 |
-| 3XX | Redirection(重定向状态码) | 需要进行附加操作已完成请求 |
-| 4XX | Client Error(客户端错误)  |         服务器无法处理请求 |
-| 5XX | Server Error(服务器错误 ) |         服务器处理请求出错 |
+| 100~199 | Informational(信息状态码) |         接受的请求正在处理 |
+| 200~299 |     Success(请求成功)     |           请求正常处理完毕 |
+| 300~399 | Redirection(重定向状态码) | 需要进行附加操作已完成请求 |
+| 400~499 | Client Error(客户端错误)  |         服务器无法处理请求 |
+| 500~599 | Server Error(服务器错误 ) |         服务器处理请求出错 |
 
-> ###### **1XX 临时响应**
+> ###### **100~199 临时响应**
 
 ::: tip 详情
 
@@ -39,7 +39,7 @@ import StatusCodeComponent from './component/StatusCode.vue'
 :::
 
 
-> ###### **2XX 成功**
+> ###### **200~299 成功**
 ::: tip 详情
  
 
@@ -72,7 +72,7 @@ import StatusCodeComponent from './component/StatusCode.vue'
 
 :::
 
-> ###### **3XX 重定向**
+> ###### **300~399 重定向**
 ::: info 详情
 
 
@@ -80,47 +80,66 @@ import StatusCodeComponent from './component/StatusCode.vue'
 
 <StatusCodeComponent text='该状态码表示请求的资源已被分配了新的URL。' :isTitle="false" />
 
-<StatusCodeComponent title="302(Found)临时重定向，该状态码表示请求的资源已被分配了新的URL，希望用户(本次)能使用新的URL访问。"  />
+<StatusCodeComponent title="302(Found)临时重定向。"  />
 
-<StatusCodeComponent text=' 在用户访问新的URL时302(Found)状态码并没有明确规定客户端在后续的请求中必须使用GET方法，大多数现代浏览器在处理 302(Found)响应时会将POST请求转换为GET请求，尽管这并不符合http/1.0标准' :isTitle="false" />
+<StatusCodeComponent text='该状态码表示请求的资源已被分配了新的URL，希望用户(本次)能使用新的URL访问。' :isTitle='false' />
 
-<StatusCodeComponent text='但是在后续的http/1.1中引入了303(See Other)和307(Temporary Redirect)状态码得到了改进' :isTitle="false" />
+<StatusCodeComponent text=' 在用户访问新的URL时302(Found)状态码并没有明确规定客户端在后续的请求中必须使用GET方法，大多数现代浏览器在处理 302(Found)响应时会将POST请求转换为GET请求，尽管这并不符合http/1.0标准。' :isTitle="false" />
+
+<StatusCodeComponent text='但是在后续的http/1.1中引入了303(See Other)和307(Temporary Redirect)状态码得到了改进。' :isTitle="false" />
 
 <StatusCodeComponent title="303(See Other)另见，这也是一种重定性状态码，通常用于将客户端重定向到不同的URL上。
 "  />
 
-<StatusCodeComponent text='303状态码和302(Found)状态码有着相同的功能，但是303状态码明确表示客户端明确表示客户端应当采用GET方法获取资源 (http/1.1)' :isTitle="false" />
+<StatusCodeComponent text='303状态码和302(Found)状态码有着相同的功能，但是303状态码明确表示客户端明确表示客户端应当采用GET方法获取资源 (http/1.1)。' :isTitle="false" />
     
 
 <StatusCodeComponent title="304(No Modified)资源已找到，但为符合条件请求..."  />
     
-<StatusCodeComponent text='该状态码表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但因发生请求未满足条件的情况后，直接返回304(No Modified)。304虽然被划分在3XX类别中，但是和重定性没有关系' :isTitle="false" />
+<StatusCodeComponent text='该状态码表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但因发生请求未满足条件的情况后，直接返回304(No Modified)。304虽然被划分在3XX类别中，但是和重定性没有关系。' :isTitle="false" />
 
     
 <StatusCodeComponent text='附带条件的请求是指采用GET方法的请求报文中包含 If-Macth, If-Modified-Since, If-None-Match,If-Range, If-Unmodified-Since 中任一首部' :isTitle="false" />
    
-<StatusCodeComponent title="307(Temporary Redirect)临时重定性。"  />
+<StatusCodeComponent title="307(Temporary Redirect)临时重定向。"  />
 
 <StatusCodeComponent text='该状态码与302(Found)有着相同的含义，在http/1.0标准中禁止POST变换成GET，307会遵照浏览器标准，不会从POST变成GET，但是对与处理响应时的行为，每种浏览器有可能出现不同的情况' :isTitle="false" />
 
 ::: 
 
 
-> ###### **4XX 客户端错误** 
+> ###### **400~499 客户端错误** 
 
 ::: warning 详情
 
-<StatusCodeComponent title="400(Bad Request)该状态码表示请求报文中语法存在错误。"  />
+<StatusCodeComponent title="400(Bad Request) 错误请求"  />
 
-<StatusCodeComponent title="401(Unauthorized)该状态码表示发送的请求需要有通过http认证(BASIC认证,DIGEST认证) 的认证信息，若之前已经进行过1次请求，则表示用户认证失败"  />
+<StatusCodeComponent text='这表示客户端的请求语法错误，服务器无法理解。' :isTitle="false" />
 
-<StatusCodeComponent title="403(Forbidden)该状态码表明对请求资源的访问被服务器拒绝了"  />
+<StatusCodeComponent title="401(Unauthorized) 未经授权"  />
 
-<StatusCodeComponent title="404(Not Found)服务器上没有请求的资源"  />
+<StatusCodeComponent text='该状态码表示发送的请求需要有通过http认证(BASIC认证,DIGEST认证) 的认证信息，若之前已经进行过1次请求，则表示用户认证失败。' :isTitle="false" />
 
+<StatusCodeComponent title="403(Forbidden) 禁止 "  />
+
+<StatusCodeComponent text='该状态码表明对请求资源的访问被服务器拒绝了。' :isTitle="false" />
+
+<StatusCodeComponent title="404(Not Found) 未找到 "  />
+
+<StatusCodeComponent text='服务器上没有请求的资源, 即URL不存在。' :isTitle="false" />
+
+<StatusCodeComponent title="405(Method Not Allowed) 方法不允许 "  />
+
+<StatusCodeComponent text='请求行中指定的请求方法不能被用于请求相应的资源。' :isTitle="false" />
+<StatusCodeComponent text='例如: 当一个资源不支持请求行中指定的PUT或DELETE方法时。' :isTitle="false" />
+
+<StatusCodeComponent title="406(Not Acceptable) 不可接受 "  />
+
+<StatusCodeComponent text='这个状态码是在服务器无法根据请求中发送的Accept头来提供一个响应，该响应会被客户端接受。当客户端指定了Accept头部，并且服务器不能提供与这些头相匹配的响应时，就会发生这种情况' :isTitle="false" />
+<StatusCodeComponent text='例如: 客户端请求只接受application/json格式的数据，而服务器只能返回text/html格式的数据，那么服务器应该返回一个406错误。' :isTitle="false" />
 :::
 
-> ###### **5XX 服务器错误** 
+> ###### **500~599 服务器错误** 
 
 ::: danger 详情
 
