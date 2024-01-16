@@ -8,11 +8,12 @@ hero:
   tagline: Today is also an ordinary day...
   actions:
     - theme: brand
-      text: 开始学习->
+      text: 开始学习
       link: /css/questions
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      icon: github
+      text: Github
+      link: https://github.com
   image:
     src: ./1.jpg
     alt: VitePress

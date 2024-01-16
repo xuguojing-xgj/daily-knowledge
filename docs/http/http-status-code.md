@@ -143,8 +143,33 @@ import StatusCodeComponent from './component/StatusCode.vue'
 
 ::: danger 详情
 
-<StatusCodeComponent title="500(Internal Server Error)服务器内部资源出错，服务器端在执行请求时发生了故障"  />
+<StatusCodeComponent title="500(Internal Server Error)通用错误消息"  />
 
-<StatusCodeComponent title="503(Service Unavailable)服务器暂时处于超负载或正在进行停机维护"  />
+<StatusCodeComponent text='没有指定错误的具体原因。它通常是服务器遇到了一个预期之外的情况，导致它无法完成对请求的处理' :isTitle="false" />
+
+<StatusCodeComponent title="501(Not Implemented)服务器不支持请求的功能，或者无法完成请求"  />
+
+<StatusCodeComponent text='通常是服务器无法识别请求方法，并且无法支持其对任何资源的处理' :isTitle="false" />
+
+<StatusCodeComponent title="502(Bad Gateway)错误网关"  />
+
+<StatusCodeComponent text='作为网关或代理服务器尝试执行请求时收到了无效响应。这通常表示后端服务器下游发生了错误。' :isTitle="false" />
+
+<StatusCodeComponent title="503(Service Unavailable)服务不可用"  />
+
+<StatusCodeComponent text='服务器目前无法使用（由于超载或停机维护）' :isTitle="false" />
+
+<StatusCodeComponent title="504(Gateway Timeout)网关超时"  />
+
+<StatusCodeComponent text='网关或代理服务器并没有从上游服务器收到及时的响应。这可以发生在许多不同的情况下，比如服务器过载造成处理延迟。' :isTitle="false" />
+
+<StatusCodeComponent title="505(HTTP Version Not Supported)网关超时"  />
+
+<StatusCodeComponent text='服务器不支持请求中使用的HTTP协议版本。' :isTitle="false" />
+
+<StatusCodeComponent title="511(Network Authentication Required)网络身份验证要求"  />
+
+<StatusCodeComponent text='客户端需要进行网络认证才能获得网络访问权限。' :isTitle="false" />
+
 
 :::
