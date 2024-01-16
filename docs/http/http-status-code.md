@@ -137,6 +137,45 @@ import StatusCodeComponent from './component/StatusCode.vue'
 
 <StatusCodeComponent text='这个状态码是在服务器无法根据请求中发送的Accept头来提供一个响应，该响应会被客户端接受。当客户端指定了Accept头部，并且服务器不能提供与这些头相匹配的响应时，就会发生这种情况' :isTitle="false" />
 <StatusCodeComponent text='例如: 客户端请求只接受application/json格式的数据，而服务器只能返回text/html格式的数据，那么服务器应该返回一个406错误。' :isTitle="false" />
+
+<StatusCodeComponent title="413(Payload Too Large) 负载过大 "  />
+
+<StatusCodeComponent text='请求实体过大，超过服务器的处理能力。' :isTitle="false" />
+
+<StatusCodeComponent title="414(URI Too Long) URI过长 "  />
+
+<StatusCodeComponent text='请求的 URI 过长，服务器无法处理。' :isTitle="false" />
+
+<StatusCodeComponent title="415(Unsupported Media Type) 不支持的媒体类型 "  />
+
+<StatusCodeComponent text='请求的格式不受请求页面的支持。' :isTitle="false" />
+
+<StatusCodeComponent title="416(Range Not Satisfiable) 请求范围不满足 "  />
+
+<StatusCodeComponent text='客户端请求的范围无效或无法满足。' :isTitle="false" />
+
+<StatusCodeComponent title="418(I'm a teapot) 彩蛋状态码 "  />
+
+<StatusCodeComponent text='由超文本咖啡壶控制协议定义，实际上是一个恶搞代码，意味着服务器是一个茶壶，不会泡咖啡。' :isTitle="false" />
+
+<StatusCodeComponent title="422(Unprocessable Entity) 无法处理的实体 "  />
+
+<StatusCodeComponent text='请求格式正确，但是由于含有语义错误，无法响应。' :isTitle="false" />
+
+<StatusCodeComponent title="423(Locked) 当前资源被锁定。 "  />
+
+<StatusCodeComponent title="424(Failed Dependency) 依赖失败 "  />
+
+<StatusCodeComponent text='请由于先前的请求失败，导致当前请求失败。' :isTitle="false" />
+
+<StatusCodeComponent title="429(Too Many Requests) 请求过多 "  />
+
+<StatusCodeComponent text='客户端发送的请求过多。' :isTitle="false" />
+
+<StatusCodeComponent title="431(Request Header Fields Too Large) 请求头字段过大 "  />
+
+<StatusCodeComponent text='服务器不愿处理请求，因为一个或多个头字段过大。' :isTitle="false" />
+
 :::
 
 > ###### **500~599 服务器错误** 
