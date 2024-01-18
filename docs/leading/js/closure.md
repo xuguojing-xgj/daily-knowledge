@@ -54,7 +54,7 @@ function encapsulation() {
   };
 }
 
-const MyEncapsulation = encapsulation();
-MyEncapsulation.privateOne();
-console.log(MyEncapsulation.privateTwo()); // 我是一个变量...1
+const myEncapsulation = encapsulation();
+myEncapsulation.privateOne();
+console.log(myEncapsulation.privateTwo()); // 我是一个变量...1
 ```
