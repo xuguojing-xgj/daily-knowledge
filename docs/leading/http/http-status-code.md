@@ -10,9 +10,9 @@ import StatusCodeComponent from './component/StatusCode.vue'
 </script>
 
 
-### http 状态码
+# http 状态码
 
-> _状态码类别：_
+> ####  _状态码类别：_
 
 |     |           类别            |                   原因短语 |
 | --- | :-----------------------: | :-------------------------: |
