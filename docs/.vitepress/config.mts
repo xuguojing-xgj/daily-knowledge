@@ -11,52 +11,21 @@ export default defineConfig({
     themeConfig: {
         logo: { src: '/favicon.ico', width: 24, height: 24 },
         // https://vitepress.dev/reference/default-theme-config
-        nav: [
-            { text: '首页', link: '/' },
-            { text: '关于', link: '/markdown-examples' }
-        ],
+        nav: nav(),
 
-        sidebar: [
-            {
-                text: 'http',
-                collapsed: false,
-                items: [
-                    { text: 'http状态码', link: '/http/http-status-code' },
-                ]
-            },
-            {
-                text: 'css',
-                collapsed: false,
-                items: [
-                    { text: '学习内容', link: '/css/questions' },
-                    { text: '文章阅读', link: '/css/articleReading' }
-                ]
-            },
-            {
-                text: 'js',
-                collapsed: false,
-                items: [
-                    { text: '闭包', link: '/js/closure' },
-                ]
-            },
-            {
-                text: 'react',
-                collapsed: false,
-                items: []
-            },
-            {
-                text: 'vue',
-                collapsed: false,
-                items: []
-            },
-        ],
+        sidebar: {
+            '/leading/': {base:'/leading/', items: sidebarGuide() }
+        },
 
         footer: {
             message: 'Released under the MIT License.',
             copyright: '<a href="https://beian.miit.gov.cn/">京ICP备2023032161号-1</a>'
         },
+        outline: {
+            label: '-'
+        },
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+            { icon: 'github', link: 'https://github.com' }
         ],
         search: {
             provider: 'local',
@@ -67,6 +36,47 @@ export default defineConfig({
     }
 })
 
-function nav() :DefaultTheme.SidebarItem[]  {
-    return []
+function nav(): DefaultTheme.NavItem[]   {
+    return [
+        { text: '首页', link: '/' },
+        { text: '前端', link: '/leading/css/questions', activeMatch: '/leading/' }
+    ]
+}
+
+
+function sidebarGuide(): DefaultTheme.SidebarItem[] { 
+    return [
+        {
+            text: 'http',
+            collapsed: false,
+            items: [
+                { text: 'http状态码', link: 'http/http-status-code' },
+            ]
+        },
+        {
+            text: 'css',
+            collapsed: false,
+            items: [
+                { text: '学习内容', link: 'css/questions' },
+                { text: '文章阅读', link: 'css/articleReading' }
+            ]
+        },
+        {
+            text: 'js',
+            collapsed: false,
+            items: [
+                { text: '闭包', link: 'js/closure' },
+            ]
+        },
+        {
+            text: 'react',
+            collapsed: false,
+            items: []
+        },
+        {
+            text: 'vue',
+            collapsed: false,
+            items: []
+        },
+    ]
 }
