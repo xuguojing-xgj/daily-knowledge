@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /leading/css/questions
+      link: /leading/css/box-model
     - theme: alt
       icon: github
       text: Github

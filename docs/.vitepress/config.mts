@@ -57,7 +57,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: 'css',
             collapsed: false,
             items: [
-                { text: '学习内容', link: 'css/questions' },
+                { text: '盒子模型', link: 'css/box-model' },
+                { text: '如何解决盒子塌陷问题', link: 'css/box-collapse' },
+                { text: '使一个盒子垂直水平居中', link: 'css/box-centered' },
+                { text: '在css中使用变量', link: 'css/variable' },
                 { text: '文章阅读', link: 'css/articleReading' }
             ]
         },

@@ -53,9 +53,10 @@ const props = withDefaults(defineProps<Props>(), {
     margin-top:10px;
     margin-left:30px;
     vertical-align: center; 
+    color: cornflowerblue;
     /* 设置字体渐变 */
-    background: linear-gradient(to right, red, blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(to right, red, blue); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
 }
 </style>
