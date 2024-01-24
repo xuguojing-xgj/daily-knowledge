@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "今天也是平常的一天..."
+  name: "听其言而观其行"
   text: ""
   tagline: Today is also an ordinary day...
   actions:
