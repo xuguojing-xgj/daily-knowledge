@@ -26,7 +26,8 @@ features:
     details: 闲倚胡床，庾公楼外峰千朵。与谁同坐。明月清风我。
 ---
 
-<style>
+<style scoped>
+    
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);

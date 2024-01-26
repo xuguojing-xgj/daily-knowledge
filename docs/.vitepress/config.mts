@@ -47,11 +47,9 @@ function nav(): DefaultTheme.NavItem[]   {
 function sidebarGuide(): DefaultTheme.SidebarItem[] { 
     return [
         {
-            text: 'http',
+            text: 'html',
             collapsed: false,
-            items: [
-                { text: 'http状态码', link: 'http/http-status-code' },
-            ]
+            items: []
         },
         {
             text: 'css',
@@ -62,6 +60,13 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 { text: '使一个盒子垂直水平居中', link: 'css/box-centered' },
                 { text: '在css中使用变量', link: 'css/variable' },
                 { text: '文章阅读', link: 'css/articleReading' }
+            ]
+        },
+        {
+            text: 'http',
+            collapsed: false,
+            items: [
+                { text: 'http状态码', link: 'http/http-status-code' },
             ]
         },
         {
