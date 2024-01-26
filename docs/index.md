@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "听其言而观其行"
   text: ""
-  tagline: Today is also an ordinary day...
+  tagline: Today is also an ordinary day
   actions:
     - theme: brand
       text: 开始学习
