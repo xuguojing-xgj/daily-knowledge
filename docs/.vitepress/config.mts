@@ -74,6 +74,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '闭包', link: 'js/closure' },
+                { text: 'promise', link: 'js/promise' },
             ]
         },
         {
